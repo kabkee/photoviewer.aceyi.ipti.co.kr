@@ -6,14 +6,14 @@
     "version": "1.0",
   
     "action": {
-     "default_icon": "icon.png",
+     "default_icon": "girl.png",
      "default_popup": "popup.html"
     },
     "icons": {
-     "128": "icon.png"
+     "128": "girl.png"
 
     },
-    "permissions": ["storage", "tabs", "activeTab", "scripting"],
+    "permissions": ["scripting"],
      "background": {
     },
     "content_scripts": [
@@ -22,7 +22,7 @@
             "http://aceyi.ipti.co.kr/photoviewer/*"
           ],
           "all_frames": true,
-          "js": ["jquery.3.6.0.min.js","content-script.js"],
+          "js": ["thirdparty/jquery.3.6.0.min.js","content-script.js"],
           "css": ["content-script.css"]
         }
     ],
