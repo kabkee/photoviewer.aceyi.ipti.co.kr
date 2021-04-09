@@ -1,0 +1,30 @@
+{
+    "manifest_version": 3,
+  
+    "name": "시립어린이집 사진 도우미 PLUGIN",
+    "description": "시립용인어린이집 사진을 보기 편하게 해줍니다.",
+    "version": "1.0",
+  
+    "action": {
+     "default_icon": "icon.png",
+     "default_popup": "popup.html"
+    },
+    "icons": {
+     "128": "icon.png"
+
+    },
+    "permissions": ["storage", "tabs", "activeTab", "scripting"],
+     "background": {
+    },
+    "content_scripts": [
+        {
+          "matches": [
+            "http://aceyi.ipti.co.kr/photoviewer/*"
+          ],
+          "all_frames": true,
+          "js": ["jquery.3.6.0.min.js","content-script.js"],
+          "css": ["content-script.css"]
+        }
+    ],
+    "host_permissions": ["https://ssl.google-analytics.com/ga.js https://example.cc/js/*"]
+  }
